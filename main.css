@@ -22,3 +22,17 @@
   font-size: 16px;
   cursor: pointer;
 }
+.health {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+}
+.confirmButton{
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
