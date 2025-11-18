@@ -57,7 +57,7 @@ else{
 }
 
 })
-
+message.textContent="Fail?"
 document.body.appendChild(health);
 document.body.appendChild(confirmButton);
 document.body.appendChild(message);
