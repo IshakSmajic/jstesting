@@ -25,8 +25,10 @@ document.body.appendChild(increase);
 document.body.appendChild(decrease);
 document.body.appendChild(reset);
 document.body.appendChild(display);
-console.log("test"); */
+console.log("test"); 
 
+
+HEALTH SYSTEM
 const health = document.createElement("input");
 const confirmButton = document.createElement("button");
 const message = document.createElement("p");
@@ -61,4 +63,77 @@ message.textContent="Fail?"
 document.body.appendChild(health);
 document.body.appendChild(confirmButton);
 document.body.appendChild(message);
+*/
 
+let accountBalance = 0;
+let balanceDisplay; 
+
+function updateBalance() {
+    balanceDisplay.textContent = `Current balance: ${accountBalance}`;
+}
+
+function deposit() {
+    const container = document.createElement("div");
+
+    const p = document.createElement("p");
+    p.textContent = "How much would you like to deposit?";
+
+    const input = document.createElement("input");
+    input.type = "number";
+
+    const button = document.createElement("button");
+    button.textContent = "DEPOSIT";
+
+    button.addEventListener("click", () => {
+        const amount = Number(input.value);
+        if (!amount) return;
+
+        accountBalance += amount;
+        updateBalance(); 
+    });
+
+    container.appendChild(p);
+    container.appendChild(input);
+    container.appendChild(button);
+    document.body.appendChild(container);
+}
+
+function withdraw() {
+    const container = document.createElement("div");
+
+    const p = document.createElement("p");
+    p.textContent = "How much would you like to withdraw?";
+
+    const input = document.createElement("input");
+    input.type = "number";
+
+    const button = document.createElement("button");
+    button.textContent = "WITHDRAW";
+
+    button.addEventListener("click", () => {
+        const amount = Number(input.value);
+        if (!amount) return;
+
+        accountBalance -= amount;
+        updateBalance(); 
+    });
+
+    container.appendChild(p);
+    container.appendChild(input);
+    container.appendChild(button);
+    document.body.appendChild(container);
+}
+
+function checkBalance() {
+    balanceDisplay = document.createElement("p");
+    balanceDisplay.textContent = `Current balance: ${accountBalance}`;
+    document.body.appendChild(balanceDisplay);
+}
+
+function createAccount() {
+    deposit();
+    withdraw();
+    checkBalance(); 
+}
+
+createAccount();
