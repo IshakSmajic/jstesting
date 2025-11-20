@@ -63,7 +63,12 @@ message.textContent="Fail?"
 document.body.appendChild(health);
 document.body.appendChild(confirmButton);
 document.body.appendChild(message);
-*/
+
+
+
+/*
+Banking system sim
+
 
 let accountBalance = 0;
 let balanceDisplay; 
@@ -137,3 +142,44 @@ function createAccount() {
 }
 
 createAccount();
+*/
+
+
+let allItems = [
+    { name: "Laptop",
+      price: 1000,
+      quantity: 3
+     },
+    { name: "Monitor",
+      price: 200,
+      quantity: 7
+    },
+    { name: "PSU",
+      price: 45,
+      quantity: 5
+     },
+     { name: "Mouse",
+       price: 45,
+       quantity: 3
+     },
+     { name: "Motherboard",
+       price: 150,
+       quantity: 2
+     },
+     { name: "GPU",
+       price: 800,
+       quantity: 6
+     },
+     { name: "Charger",
+       price: 25,
+       quantity: 13
+     },
+     { name: "CPU",
+       price: 300,
+       quantity: 8
+     }];
+     const initialValue = 0;
+function calculatePrice(){
+    
+}
+
