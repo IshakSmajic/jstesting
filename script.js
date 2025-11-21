@@ -180,6 +180,6 @@ let allItems = [
      }];
      const initialValue = 0;
 function calculatePrice(){
-    
+    console.log("Test succes!")
 }
 
