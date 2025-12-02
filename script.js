@@ -145,7 +145,7 @@ createAccount();
 */
 
 
-let allItems = [
+let items = [
     { name: "Laptop",
       price: 1000,
       quantity: 3
@@ -178,8 +178,34 @@ let allItems = [
        price: 300,
        quantity: 8
      }];
-     const initialValue = 0;
-function calculatePrice(){
-    console.log("Test succes!")
-}
+     
+     const validItems = items.filter(item => item.name && typeof item.price === "number" && typeof item.quantity === "number" && item.price > 0 && item.quantity > 0);
 
+     const totalQuantity = validItems.reduce((acc, item) => acc + item.quantity,0);
+
+     const totalPrice = validItems.reduce((acc, item) => acc + (item.price * item.quantity),0);
+
+     const receiptLines = validItems.map(item => {
+        const subtotal = item.price * item.quantity;
+        return `${item.name} — ${item.quantity} × ${item.price} = ${subtotal}`;
+     });
+
+     const receiptBox = document.getElementById("receipt");
+     const totalQtyBox = document.getElementById("totalQuantity");
+     const totalPriceBox = document.getElementById("totalPrice");
+     const validItemsBox = document.getElementById("validItems");
+
+     receiptLines.forEach(line => {
+        const p=document.createElement("p");
+        p.textContent=line;
+        receiptBox.appendChild(p);
+     });
+
+     totalQtyBox.textContent = `Total Quantity: ${totalQuantity}`;
+     totalPriceBox.textContent = `Total Price: ${totalPrice}`;
+
+     validItems.forEach(item => {
+     const li = document.createElement("li");
+     li.textContent = `${item.name} (price: ${item.price}, qty: ${item.quantity})`;
+     validItemsBox.appendChild(li);
+});

@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Calculator</title>
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
 </head>
 <body>
-    
+
+    <div class="container">
+        <h1>Shopping Cart Calculator</h1>
+
+        <section class="receipt-box">
+            <h2>Receipt</h2>
+            <div id="receipt"></div>
+        </section>
+
+        <section class="totals-box">
+            <h2>Totals</h2>
+            <p id="totalQuantity"></p>
+            <p id="totalPrice"></p>
+        </section>
+
+        <section class="valid-items-box">
+            <h2>Valid Items</h2>
+            <ul id="validItems"></ul>
+        </section>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
