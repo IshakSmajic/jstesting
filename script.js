@@ -212,3 +212,13 @@ let items = [
 */
 
 let user = [{name: "Trent", age: 35, address: "unknown", favFoods: "unknown"}];
+
+
+function modifyUser(){
+    
+}
+
+
+function updateUser(){
+
+}
