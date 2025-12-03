@@ -144,7 +144,7 @@ function createAccount() {
 createAccount();
 */
 
-
+/*
 let items = [
     { name: "Laptop",
       price: 1000,
@@ -209,3 +209,6 @@ let items = [
      li.textContent = `${item.name} (price: ${item.price}, qty: ${item.quantity})`;
      validItemsBox.appendChild(li);
 });
+*/
+
+let user = [{name: "Trent", age: 35, address: "unknown", favFoods: "unknown"}];
