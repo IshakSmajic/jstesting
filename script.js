@@ -211,11 +211,11 @@ let items = [
 });
 */
 
-let user = [{name: "Trent", age: 35, address: "unknown", favFoods: "unknown"}];
+let user = {name: "Ishak", age: 35, address: { city: "Zenica", country: "Bosnia and Herzegovina"}, favFoods: ["cevapi","burek", "pizza"]};
 
 
-function modifyUser(){
-    
+function formatUser({ name, age, address: { city, country }, favFoods }) {
+  return `${name} is ${age} years old, lives in ${city}, ${country}, and loves ${favFoods.join(", ")}.`;
 }
 
 
