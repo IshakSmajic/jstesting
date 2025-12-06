@@ -219,6 +219,14 @@ function formatUser({ name, age, address: { city, country }, favFoods }) {
 }
 
 
-function updateUser(){
+function updateUser(originalUser, changes){
+  return{
+    ...originalUser,
+    ...changes,
+    address: {
+      ...originalUser.address,
+      ...arguments(changes.address || {})
+    }
+  };
 
 }
