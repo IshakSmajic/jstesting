@@ -211,7 +211,7 @@ let items = [
 });
 */
 
-let user = {name: "Ishak", age: 35, address: { city: "Zenica", country: "Bosnia and Herzegovina"}, favFoods: ["cevapi","burek", "pizza"]};
+/*let user = {name: "Ishak", age: 35, address: { city: "Zenica", country: "Bosnia and Herzegovina"}, favFoods: ["cevapi","burek", "pizza"]};
 
 
 function formatUser({ name, age, address: { city, country }, favFoods }) {
@@ -229,4 +229,13 @@ function updateUser(originalUser, changes){
     }
   };
 
+}*/
+
+let key = 'secret';
+let myMap = new Map();
+let aValue = "Yeehaw";
+
+myMap.set(key, aValue);
+for (const [key, value] of myMap) {
+  console.log(`${value}`);
 }
