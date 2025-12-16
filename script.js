@@ -239,3 +239,5 @@ myMap.set(key, aValue);
 for (const [key, value] of myMap) {
   console.log(`${value}`);
 }
+
+console.log("Test change");
