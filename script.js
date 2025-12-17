@@ -231,13 +231,10 @@ function updateUser(originalUser, changes){
 
 }*/
 
-let key = 'secret';
-let myMap = new Map();
-let aValue = "Yeehaw";
-
-myMap.set(key, aValue);
-for (const [key, value] of myMap) {
-  console.log(`${value}`);
-}
-
 console.log("Test change");
+
+console.log("Sending request to server")
+setTimeout(()=>{
+  console.log("Here is your data from the server")
+},3000)
+console.log("End of file")
