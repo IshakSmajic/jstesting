@@ -233,8 +233,19 @@ function updateUser(originalUser, changes){
 
 console.log("Test change");
 
-console.log("Sending request to server")
+console.log("Sending request to server");
 setTimeout(()=>{
-  console.log("Here is your data from the server")
+  console.log("Here is your data from the server");
 },3000)
-console.log("End of file")
+console.log("End of file");
+
+
+setTimeout(()=>{
+  document.body.style.backgroundColor = 'red';
+}, 2000)
+setTimeout(()=>{
+  document.body.style.backgroundColor = 'yellow';
+}, 3000)
+setTimeout(()=>{
+  document.body.style.backgroundColor = 'lightgreen';
+}, 4000)
